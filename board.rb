@@ -7,8 +7,6 @@ class Board
     @board = %w[123 --- --- ---]
     puts 'this is the board'
     print_board
-    puts "the rows are displayed on the side,\nwhile the columns are placed on
-          the top"
   end
 
   def place_tic_tac(pos, tic_tac)

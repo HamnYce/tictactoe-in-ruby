@@ -1,11 +1,3 @@
 
-7
-menu.rb,0/c/0c408a12516a3f0987764c19113b449959bf1fb8
 9
 	winner.rb,2/a/2aa83d4b34219189db34bcca3f1c57ad1ea3ea5b
-9
-	driver.rb,a/6/a654e90eab10ecb6a9ca75be444c017334bfe0f4
-7
-main.rb,6/3/63c1ef20f181a16e66878647e68a9ba2c30fd5e5
-8
-board.rb,4/2/42ea30b709a667e5118bdde3ba8df086ac4887e8

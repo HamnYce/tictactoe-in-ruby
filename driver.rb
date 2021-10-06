@@ -6,14 +6,14 @@ require_relative 'board'
 
 # high level documentation
 class Driver
-
+  # TODO: turn method too large
+  # TODO: take in choice in initialise method
 
   include Menu
   include Winner
 
   def start
     @turn_count = 0
-    print_title_screen
     init_player_names
     print_intro_dialogue(@player_one, @player_two)
     @board = Board.new
@@ -30,7 +30,17 @@ class Driver
     puts "Which column for the #{@sign}?"
     column = gets.chomp.to_i
 
-    @board.place_tic_tac([row, column], @sign)
+    until @board.place_tic_tac([row, column], @sign)
+      puts "\e[31minvalid input, please try again ^_^\e[0m"
+      sleep 0.25
+      puts '----'
+
+      # Taking in input again
+      puts "Which row do you want to place the #{@sign} in?"
+      row = gets.chomp.to_i
+      puts "Which column for the #{@sign}?"
+      column = gets.chomp.to_i
+    end
 
     @board.print_board
 
@@ -49,4 +59,19 @@ class Driver
     turn until winner?(@board.board)
     puts "#{@sign == 'X' ? @player_one : @player_two} is the winner!!!!"
   end
+
+  def print_title
+    print_title_screen
+
+    choice = gets.chomp.to_i
+    case choice
+    when 1
+      game.start
+    when 2
+      puts 'option 2'
+    else
+      puts 'thank you for trying me out'
+    end
+  end
+
 end
