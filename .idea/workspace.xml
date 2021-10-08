@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b48d986d-a456-4b28-8968-679c6fe0b94a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c408a12516a3f0987764c19113b449959bf1fb8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/42ea30b709a667e5118bdde3ba8df086ac4887e8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/63c1ef20f181a16e66878647e68a9ba2c30fd5e5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a654e90eab10ecb6a9ca75be444c017334bfe0f4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2aa83d4b34219189db34bcca3f1c57ad1ea3ea5b" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/board.rb" beforeDir="false" afterPath="$PROJECT_DIR$/board.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/driver.rb" beforeDir="false" afterPath="$PROJECT_DIR$/driver.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.rb" beforeDir="false" afterPath="$PROJECT_DIR$/main.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.rb" beforeDir="false" afterPath="$PROJECT_DIR$/menu.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +43,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
   </component>
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="true" />
@@ -132,7 +126,8 @@
       <workItem from="1632689114333" duration="9906000" />
       <workItem from="1633128722004" duration="21019000" />
       <workItem from="1633336374071" duration="7247000" />
-      <workItem from="1633467619920" duration="3659000" />
+      <workItem from="1633467619920" duration="5792000" />
+      <workItem from="1633719613553" duration="3228000" />
     </task>
     <servers />
   </component>
@@ -154,6 +149,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RubyMineFirstTime@test.rcov" NAME="test Coverage Results" MODIFIED="1632688263539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." MODULE_NAME="RubyMineFirstTime" />
     <SUITE FILE_PATH="coverage/RubyMineFirstTime@test__1_.rcov" NAME="test (1) Coverage Results" MODIFIED="1632688530312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="RubyMineFirstTime" />
-    <SUITE FILE_PATH="coverage/Tic_Tac_Toe_Project@test__2_.rcov" NAME="test (2) Coverage Results" MODIFIED="1633467694702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Tic_Tac_Toe_Project" />
+    <SUITE FILE_PATH="coverage/Tic_Tac_Toe_Project@test__2_.rcov" NAME="test (2) Coverage Results" MODIFIED="1633729144142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Tic_Tac_Toe_Project" />
   </component>
 </project>
