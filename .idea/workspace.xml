@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b48d986d-a456-4b28-8968-679c6fe0b94a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/board.rb" beforeDir="false" afterPath="$PROJECT_DIR$/board.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/driver.rb" beforeDir="false" afterPath="$PROJECT_DIR$/driver.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.rb" beforeDir="false" afterPath="$PROJECT_DIR$/main.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.rb" beforeDir="false" afterPath="$PROJECT_DIR$/menu.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winner.rb" beforeDir="false" afterPath="$PROJECT_DIR$/winner.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +128,7 @@
       <workItem from="1633128722004" duration="21019000" />
       <workItem from="1633336374071" duration="7247000" />
       <workItem from="1633467619920" duration="5792000" />
-      <workItem from="1633719613553" duration="3610000" />
+      <workItem from="1633719613553" duration="5275000" />
     </task>
     <servers />
   </component>
@@ -145,6 +150,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RubyMineFirstTime@test.rcov" NAME="test Coverage Results" MODIFIED="1632688263539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." MODULE_NAME="RubyMineFirstTime" />
     <SUITE FILE_PATH="coverage/RubyMineFirstTime@test__1_.rcov" NAME="test (1) Coverage Results" MODIFIED="1632688530312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="RubyMineFirstTime" />
-    <SUITE FILE_PATH="coverage/Tic_Tac_Toe_Project@test__2_.rcov" NAME="test (2) Coverage Results" MODIFIED="1633729144142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Tic_Tac_Toe_Project" />
+    <SUITE FILE_PATH="coverage/Tic_Tac_Toe_Project@test__2_.rcov" NAME="test (2) Coverage Results" MODIFIED="1633731718013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Tic_Tac_Toe_Project" />
   </component>
 </project>

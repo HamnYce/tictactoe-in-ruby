@@ -32,6 +32,9 @@ module Winner
 
   private
 
+  # compares position on the board using 2D vector coordinates.
+  # pos1[0] and pos1[1] => (x,y)
+  # if all 3 coordinates are the same AND not '-' then winner is present.
   def same?(board, pos1, pos2, pos3)
     first = board[pos1[0]][pos1[1]]
     second = board[pos2[0]][pos2[1]]

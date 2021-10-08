@@ -2,7 +2,6 @@
 
 # Module contains data for the visual portions of the game.
 module Menu
-  # title ascii art
   TITLE =
     <<-TITLE
         ╔════╗─╔════╗───╔════╗
@@ -17,7 +16,7 @@ module Menu
     print TITLE
   end
 
-  def print_intro_dialogue(player_one, player_two)
+  def print_intro_dialogue
     # puts 'decided?'
     puts 'okay, so here\'s what the board currently looks like'
     # puts "your job, #{player_one}, is to make a line of Xs"

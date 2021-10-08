@@ -4,8 +4,7 @@
 # board. e.g. placing/updating the board
 class Board
   def initialize
-    @turns_left = 9
-    @board = %w[123 --- --- ---]
+    @board = %w[--- --- ---]
     puts 'this is the board'
     print_board
   end
@@ -14,20 +13,23 @@ class Board
     # pos[0] == row, pos[1] == col
     return false unless index_valid_size?(pos) && index_empty_pos?(pos)
 
-    @board[pos[0]][pos[1] - 1] = tic_tac
+    @board[pos[0] - 1][pos[1] - 1] = tic_tac
     true
   end
 
   def print_board
+    # prints board with helpers for row and column.
     puts ' 123'
-    (1..3).each do |i|
-      print i
+    (0..2).each do |i|
+      print i + 1
       puts @board[i]
     end
   end
 
+  # return 3 elements
+  # starting from position 0
   def to_s
-    @board[1, 3]
+    @board[0, 3]
   end
 
   private
@@ -42,6 +44,6 @@ class Board
   end
 
   def index_empty_pos?(index)
-    @board[index[0]][index[1] - 1] == '-'
+    @board[index[0] - 1][index[1] - 1] == '-'
   end
 end

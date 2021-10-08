@@ -4,7 +4,7 @@ require_relative 'menu'
 require_relative 'winner'
 require_relative 'board'
 
-# high level documentation
+# Driver class acts as glue for all the different classes.
 class Driver
 
   include Menu
@@ -15,16 +15,19 @@ class Driver
     start
   end
 
+  # init new board, turn counter, & player names, + starts gameloop
   def start
     @turn_count = 0
     init_player_names
-    print_intro_dialogue(@player_one, @player_two)
+    print_intro_dialogue
     @board = Board.new
     game_loop
   end
 
   private
 
+  # use turn count to find current sign
+  # repeats until correct position is received
   def turn
     @sign = @turn_count.even? ? 'X' : 'O'
     get_position
