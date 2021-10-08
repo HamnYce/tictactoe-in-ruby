@@ -7,5 +7,3 @@ require_relative 'driver'
 # TODO: add documentation
 
 game = Driver.new
-
-game.start
