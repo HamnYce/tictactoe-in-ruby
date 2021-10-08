@@ -12,6 +12,11 @@ class Driver
   include Menu
   include Winner
 
+  def initialize
+    print_title
+    start
+  end
+
   def start
     @turn_count = 0
     init_player_names
@@ -24,26 +29,12 @@ class Driver
 
   def turn
     @sign = @turn_count.even? ? 'X' : 'O'
-
-    puts "Which row do you want to place the #{@sign} in?"
-    row = gets.chomp.to_i
-    puts "Which column for the #{@sign}?"
-    column = gets.chomp.to_i
-
-    until @board.place_tic_tac([row, column], @sign)
-      puts "\e[31minvalid input, please try again ^_^\e[0m"
-      sleep 0.25
-      puts '----'
-
-      # Taking in input again
-      puts "Which row do you want to place the #{@sign} in?"
-      row = gets.chomp.to_i
-      puts "Which column for the #{@sign}?"
-      column = gets.chomp.to_i
+    get_position
+    until @board.place_tic_tac([@row, @column], @sign)
+      print_error_text
+      get_position
     end
-
     @board.print_board
-
     @turn_count += 1
   end
 
@@ -56,22 +47,24 @@ class Driver
   end
 
   def game_loop
-    turn until winner?(@board.board)
+    turn until winner?(@board.to_s) || @turn_count == 9
+    unless winner?(@board.to_s)
+      puts 'Game ended in a draw ^^'
+      return
+    end
     puts "#{@sign == 'X' ? @player_one : @player_two} is the winner!!!!"
   end
 
-  def print_title
-    print_title_screen
-
-    choice = gets.chomp.to_i
-    case choice
-    when 1
-      game.start
-    when 2
-      puts 'option 2'
-    else
-      puts 'thank you for trying me out'
-    end
+  def print_error_text
+    puts "\e[31minvalid input, please try again ^_^\e[0m"
+    sleep 0.25
+    puts '----'
   end
 
+  def get_position
+    puts "Which row do you want to place the #{@sign} in?"
+    @row = gets.chomp.to_i
+    puts "Which column for the #{@sign}?"
+    @column = gets.chomp.to_i
+  end
 end
