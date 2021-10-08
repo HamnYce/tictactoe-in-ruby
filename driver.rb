@@ -6,8 +6,6 @@ require_relative 'board'
 
 # high level documentation
 class Driver
-  # TODO: turn method too large
-  # TODO: take in choice in initialise method
 
   include Menu
   include Winner
