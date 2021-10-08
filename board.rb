@@ -26,10 +26,6 @@ class Board
     end
   end
 
-  def board
-    @board[1, 3]
-  end
-
   def to_s
     @board[1, 3]
   end
