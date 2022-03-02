@@ -2,4 +2,6 @@
 
 require_relative 'driver'
 
-game = Driver.new
+Driver.new
+
+# TODO: change menu.rb => text.rb
