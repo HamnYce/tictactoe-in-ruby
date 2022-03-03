@@ -32,4 +32,12 @@ module Text
     sleep 0.25
     puts '----'
   end
+
+  def end_game_statement(is_draw, name)
+    if is_draw
+      puts 'Game ended in a draw ^^'
+    else
+      puts "#{name} is the winner!!!!"
+    end
+  end
 end

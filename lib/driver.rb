@@ -26,7 +26,7 @@ class Driver
   def game_loop
     turn until game_over? || @turn_count == 9
 
-    end_game_statement
+    end_game_statement(game_over?, current_player)
   end
 
   # use turn count to find current sign
@@ -42,26 +42,8 @@ class Driver
     @turn_count += 1
   end
 
-  def current_play
+  def current_player
     @sign == 'X' ? @player_one : @player_two
-  end
-
-  private
-
-  def init_player_names
-    puts 'decide on player 1 with a game of rock, paper, scissors!'
-    puts 'player 1 what\'s your name?'
-    @player_one = gets.chomp
-    puts 'and player 2?'
-    @player_two = gets.chomp
-  end
-
-  def end_game_statement
-    if game_over?
-      puts "#{current_play} is the winner!!!!"
-    else
-      puts 'Game ended in a draw ^^'
-    end
   end
 
   def get_position
@@ -69,5 +51,13 @@ class Driver
     @row = gets.chomp.to_i
     puts "Which column for the #{@sign}?"
     @column = gets.chomp.to_i
+  end
+
+  def init_player_names
+    puts 'decide on player 1 with a game of rock, paper, scissors!'
+    puts 'player 1 what\'s your name?'
+    @player_one = gets.chomp
+    puts 'and player 2?'
+    @player_two = gets.chomp
   end
 end
