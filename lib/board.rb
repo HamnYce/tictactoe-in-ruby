@@ -4,17 +4,20 @@
 # board. e.g. placing/updating the board
 class Board
   def initialize
-    @board = %w[--- --- ---]
+    @board_state = %w[--- --- ---]
     puts 'this is the board'
     print_board
   end
 
   def place_tic_tac(pos, tic_tac)
     # pos[0] == row, pos[1] == col
-    return false unless index_valid_size?(pos) && index_empty_pos?(pos)
+    @board_state[pos[0] - 1][pos[1] - 1] = tic_tac if index_valid_pos?(pos)
+  end
 
-    @board[pos[0] - 1][pos[1] - 1] = tic_tac
-    true
+  # return 3 elements
+  # starting from position 0
+  def to_s
+    @board_state[0, 3]
   end
 
   def print_board
@@ -22,28 +25,16 @@ class Board
     puts ' 123'
     (0..2).each do |i|
       print i + 1
-      puts @board[i]
+      puts @board_state[i]
     end
-  end
-
-  # return 3 elements
-  # starting from position 0
-  def to_s
-    @board[0, 3]
   end
 
   private
 
-  def index_valid_size?(index)
-    first = index[0].between?(1, 3)
-    second = index[1].between?(1, 3)
+  def index_valid_pos?(index)
+    row = index[0].between?(1, 3)
+    column = index[1].between?(1, 3)
 
-    return true if first && second
-
-    false
-  end
-
-  def index_empty_pos?(index)
-    @board[index[0] - 1][index[1] - 1] == '-'
+    row && column && @board_state[index[0] - 1][index[1] - 1] == '-'
   end
 end
