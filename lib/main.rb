@@ -2,6 +2,6 @@
 
 require_relative 'driver'
 
-Driver.new
+Driver.new.start
 
 # TODO: change menu.rb => text.rb

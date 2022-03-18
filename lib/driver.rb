@@ -9,48 +9,55 @@ class Driver
   include Text
   include Winner
 
+  attr_reader :turn_count
+
   def initialize
-    print_title
     @turn_count = 0
-    init_player_names
-    print_intro_dialogue
-    start
+    @board = Board.new
   end
 
-  # init new board, turn counter, & player names, + starts gameloop
   def start
-    @board = Board.new
+    print_title
+    init_player_names
+    print_intro_dialogue
+    @board.print_board
     game_loop
   end
 
   def game_loop
-    turn until game_over? || @turn_count == 9
+    turn until game_over?
 
     end_game_statement(game_over?, current_player)
   end
 
   # use turn count to find current sign
-  # repeats until correct position is received
   def turn
     @sign = @turn_count.even? ? 'X' : 'O'
-    get_position
-    until @board.place_tic_tac([@row, @column], @sign)
-      print_error_text
-      get_position
-    end
+
+    player_guess
+
     @board.print_board
     @turn_count += 1
   end
 
-  def current_player
-    @sign == 'X' ? @player_one : @player_two
+  def player_guess
+    ask_position
+
+    until @board.place_tic_tac([@row, @column], @sign)
+      print_error_text
+      ask_position
+    end
   end
 
-  def get_position
+  def ask_position
     puts "Which row do you want to place the #{@sign} in?"
     @row = gets.chomp.to_i
     puts "Which column for the #{@sign}?"
     @column = gets.chomp.to_i
+  end
+
+  def current_player
+    @sign == 'X' ? @player_one : @player_two
   end
 
   def init_player_names

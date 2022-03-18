@@ -33,11 +33,11 @@ module Text
     puts '----'
   end
 
-  def end_game_statement(is_draw, name)
-    if is_draw
-      puts 'Game ended in a draw ^^'
-    else
+  def end_game_statement(has_winner, name)
+    if has_winner
       puts "#{name} is the winner!!!!"
+    else
+      puts 'Game ended in a draw ^^'
     end
   end
 end
