@@ -9,7 +9,7 @@ class Driver
   include Text
   include Winner
 
-  attr_reader :turn_count
+  attr_reader :turn_count, :sign
 
   def initialize
     @turn_count = 0

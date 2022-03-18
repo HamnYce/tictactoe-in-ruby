@@ -76,16 +76,51 @@ RSpec.describe Driver do
   end
 
   describe '#turn' do
+    let(:board_print) { double('board', print_board: nil) }
+
+    before do
+      allow(driver).to receive(:player_guess)
+      driver.instance_variable_set(:@board, board_print)
+    end
+
+    context 'when called' do
+      it '@turn_count changes by +1' do
+        expect { driver.turn }.to change(driver, :turn_count).by(1)
+      end
+    end
+
+    context 'when turn count is even' do
+      before do
+        driver.instance_variable_set(:@turn_count, 2)
+      end
+
+      it '@sign is X' do
+        driver.turn
+        expect(driver.sign).to eq('X')
+      end
+    end
+
+    context 'when turn count is odd' do
+      before do
+        driver.instance_variable_set(:@turn_count, 1)
+      end
+
+      it '@sign is O' do
+        driver.turn
+        expect(driver.sign).to eq('O')
+      end
+    end
   end
 
   describe '#current_player' do
+    # no need to test
   end
 
   describe '#ask_position' do
-    # No need for testing
+    # No need to test
   end
 
   describe '#init_player_names' do
-    # No need for testing
+    # No need to test
   end
 end
